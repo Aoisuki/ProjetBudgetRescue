@@ -1,18 +1,12 @@
 package com.rhstudio.budgetrescue;
 
 import android.app.Activity;
-import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Calendar;
 
-import static android.R.style.Theme_Holo_Light_Dialog;
 
 public class CustomPopUp extends Dialog {
     //fields

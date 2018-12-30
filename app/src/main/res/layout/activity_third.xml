@@ -1,71 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ThirdActivity">
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="90dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="40dp"
-        android:text="Annuler"
-        app:layout_constraintBottom_toTopOf="@+id/dateView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listePerso" />
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
         android:text="Paramètre"
-        app:layout_constraintBottom_toTopOf="@+id/listePerso"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="159dp" />
+        android:textSize="20sp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left">
 
-    <ListView
-        android:id="@+id/listePerso"
-        android:layout_width="313dp"
-        android:layout_height="196dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="77dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salaire :"
+                android:textSize="17sp"
+                />
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="162dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                 />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="81dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
-        android:text="Modifier"
-        app:layout_constraintBottom_toTopOf="@+id/dateView"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listePerso" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pseudo :"
+                android:textSize="17sp"
+                 />
 
-    <TextView
-        android:id="@+id/dateView"
-        android:layout_width="169dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="88dp"
-        android:text="Sélectionnez une date"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="162dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                 />
+        </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message d'Alerte :"
+                android:textSize="17sp"
+                 />
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="162dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mode :"
+                android:textSize="17sp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="131dp"
+                android:layout_height="23dp"
+                 />
+        </LinearLayout>
+
+
+    </LinearLayout>
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="169dp"
+            android:layout_height="39dp"
+            android:text="Sélectionnez une date"
+            android:textSize="17sp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="81dp"
+            android:layout_height="39dp"
+            android:text="Modifier"
+             />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="90dp"
+            android:layout_height="39dp"
+            android:text="Annuler"
+            />
+        </LinearLayout>
+
+
+</LinearLayout>
