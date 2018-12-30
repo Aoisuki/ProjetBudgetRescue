@@ -10,6 +10,7 @@ import android.content.Intent;
 
 public class SecondActivity extends AppCompatActivity {
     private SecondActivity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         this.activity = this;
 
         Button b = (Button) findViewById(R.id.button2);
+        Button b2 = (Button) findViewById(R.id.button7);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,18 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openParametre();
+
+            }
+        });
+    }
+    private void openParametre(){
+        Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+        startActivity(intent);
     }
 }
 
