@@ -24,10 +24,14 @@ public class ThirdActivity extends AppCompatActivity {
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
+    Spinner spinner;
+    ArrayAdapter<CharSequence> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third2);
+
         //Button "Annuler
         Button b3 = (Button) findViewById(R.id.button9);
         b3.setOnClickListener(new View.OnClickListener() {
@@ -38,14 +42,14 @@ public class ThirdActivity extends AppCompatActivity {
 
             }
         });
+
         //Mode
-        /*
-        Spinner spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nomMode, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemClickListener(this);
-        */
+        Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(ThirdActivity.this,android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.nomMode));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+
+
         //Calendrier
 
         mDisplayDate = (TextView) findViewById(R.id.dateView);
@@ -83,11 +87,6 @@ public class ThirdActivity extends AppCompatActivity {
         Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
         startActivity(intent);
     }
-    /*
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(),text, Toast.LENGTH_SHORT).show();
-    }
-    */
+    
+
 }
